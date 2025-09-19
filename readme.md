@@ -15,3 +15,6 @@ Support for directly running Maestro Tests on the device at Lambdatest using Hyp
 curl -u "<username>:<accessKey>" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"<local_app_path>"" -F "name="sampleApp""
 ```
 6. To start the test  `./hyperexecute --user <USERNAME> --key <ACCESS_KEY> --config yaml/maestro.yaml`
+
+7. For iOS real devices, install the following JAR file and include it in your payload. https://prod-mobile-artefacts.lambdatest.com/assets/maestro-cli/1.41.0-beta-1/maestro.jar
+
