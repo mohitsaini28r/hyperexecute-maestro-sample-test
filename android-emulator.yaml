@@ -47,7 +47,7 @@ env:
 pre:
   - chmod +x ./maestro-test/setup-script.sh
   - chmod +x ./maestro-test/runTest_android_emulator.sh
-  - maestro-test/setup-script.sh
+  - ./maestro-test/setup-script.sh
 
 # Test discovery configuration
 testDiscovery:
@@ -59,7 +59,7 @@ testDiscovery:
   type: raw
 
 # Command to run the tests using the testRunnerCommand
-testRunnerCommand: ./maestro-test/runTest_android_emulator.sh $test && mv report.xml $test.xml 
+testRunnerCommand: ./maestro-test/runTest_android_emulator.sh $test 
 
 # Only report the status of the test framework
 frameworkStatusOnly: true
