@@ -1,7 +1,7 @@
 # Define the version of the configuration file
 version: "0.2"
 
-runson: android
+runson: linux
 
 # Enable autosplit for test execution
 autosplit: true
@@ -20,6 +20,7 @@ runtime:
 # Environment variables required for Maestro execution
 env:
   MAESTRO: true
+  MAESTRO_LOGS_DIR: MaestroLogs
 
 # Shell environment to use
 shell: bash
@@ -56,7 +57,8 @@ framework:
 
 # Pre-install required dependencies or execute setup scripts
 pre:
-  - chmod +x ./maestro-test/runTest_rd_iOS.sh
+  - curl -L "https://prod-mobile-artefacts.lambdatest.com/assets/maestro-cli/1.41.0-beta-1/maestro.jar" -o maestro.jar
+  - chmod +x ./maestro-test/runTest_ios_realdevice.sh
 
 # Test discovery configuration
 testDiscovery: 
