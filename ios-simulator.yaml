@@ -47,7 +47,7 @@ env:
 pre:
   - chmod +x maestro-test/setup-script-iOS.sh
   - chmod +x ./maestro-test/runTest_ios.sh
-  - maestro-test/setup-script-iOS.sh
+  - ./maestro-test/setup-script-iOS.sh
 
 # Test discovery configuration
 testDiscovery:
@@ -59,7 +59,7 @@ testDiscovery:
   type: raw
 
 # Command to run the tests using the testRunnerCommand
-testRunnerCommand: ./maestro-test/runTest_ios.sh $test && mv report.xml $test.xml 
+testRunnerCommand: ./maestro-test/runTest_ios.sh $test 
     
 # Only report the status of the test framework
 frameworkStatusOnly: true

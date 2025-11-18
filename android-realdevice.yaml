@@ -19,7 +19,7 @@ framework:
   name: raw
   args:
     # List of devices to run tests on (two Pixel 5 devices in this case)
-    devices: ["Pixel 6"]
+    devices: ["Pixel 6-14"]
     # Enable or disable video recording support
     video: true
     # Enable or disable device log support
@@ -47,7 +47,7 @@ env:
 pre:
   - chmod +x ./maestro-test/setup-script.sh
   - chmod +x ./maestro-test/runTest.sh
-  - maestro-test/setup-script.sh
+  - ./maestro-test/setup-script.sh
 
 # Test discovery configuration
 testDiscovery:
@@ -59,7 +59,7 @@ testDiscovery:
   type: raw
 
 # Command to run the tests using the testRunnerCommand
-testRunnerCommand: ./maestro-test/runTest.sh $test && mv report.xml $test.xml 
+testRunnerCommand: ./maestro-test/runTest.sh $test
 
 # Only report the status of the test framework
 frameworkStatusOnly: true

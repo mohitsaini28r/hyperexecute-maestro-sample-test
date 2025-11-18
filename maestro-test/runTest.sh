@@ -1,6 +1,6 @@
 #!/bin/bash
 # List the running processes on the machine
-ps -ef
+# ps -ef
 # list the connected devices
 adb devices
 # check the maestro version
