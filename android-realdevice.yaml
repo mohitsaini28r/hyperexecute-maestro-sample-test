@@ -13,6 +13,10 @@ runson: android
 # Enable dynamic allocation of resources
 dynamicAllocation: true
 
+runtime:
+  - language: java
+    version: "21"
+
 # Test framework configuration
 framework:
   # Name of the test framework (raw in this case)
