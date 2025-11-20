@@ -10,6 +10,10 @@ concurrency: 2
 # Specify the target platform for test execution (Android in this case)
 runson: android
 
+runtime:
+  - language: java
+    version: "21"
+
 # Enable dynamic allocation of resources
 dynamicAllocation: true
 
@@ -25,7 +29,7 @@ framework:
     # Enable or disable device log support
     deviceLog: true
     # App ID to be installed (mandatory field, using <app_id>)
-    appId: <app_id>
+    appId: lt://<app_id>
     # Build name for identification on the automation dashboard
     buildName: maestro-t1
     # Timeout for device queue
